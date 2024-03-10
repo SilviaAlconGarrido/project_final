@@ -1,7 +1,8 @@
-mapeo_abreviaturas = {
+# abreviaturas
+
+CONTRACCIONES_ESP = {
 "xq": "porque",
-"Holiiii": "Hola",
-"Holiii": "Hola",
+
 "sticker omitido": "imagen",
 "imagen omitida": "imagen",
 "q": "que",
@@ -16,7 +17,7 @@ mapeo_abreviaturas = {
 "Ayyy":"Ay",
 "proque": "porque",
 "nose": "no se",
-"sii": "si",
+
 "tmbn": "tambien",
 "lab": "laboratorio",
 "labs": "labboratotios",
@@ -54,10 +55,8 @@ mapeo_abreviaturas = {
 "Dps": "despues",
 "Xfa": "por favor",
 "Dd": "donde",
-"Oki": "vale",
-"Ok": "vale",
-"OK": "vale",
-"Tkt": "tranquilo",
+
+"Tkt": "tranquilo", 
 "Tqg": "te quiero un monton",
 "Bss": "besos",
 "Tmbn": "tambien",
@@ -70,5 +69,18 @@ mapeo_abreviaturas = {
 "ASAP": "tan pronto como sea posible",
 "OMG": "Oh Dios mio",
 "BFF": "Mejores amigos para siempre",
-"Okey": "vale",
+
 }
+
+def corregir_abreviaturas(texto, mapeo_abreviaturas=CONTRACCIONES_ESP):
+    texto_corregido = []
+    for palabra in texto.replace(".","").split():
+        palabra_corregida = mapeo_abreviaturas.get(palabra.lower(), palabra)
+        if palabra_corregida is not None:
+            texto_corregido.append(palabra_corregida)
+        else:
+            texto_corregido.append(palabra)
+    return ' '.join(texto_corregido)
+# Llamar a la función corregir_abreviaturas con el diccionario de abreviaturas
+a = corregir_abreviaturas( 'Q tal. okey xq.')
+#print(a)
