@@ -82,5 +82,5 @@ def corregir_abreviaturas(texto, mapeo_abreviaturas=CONTRACCIONES_ESP):
             texto_corregido.append(palabra)
     return ' '.join(texto_corregido)
 # Llamar a la función corregir_abreviaturas con el diccionario de abreviaturas
-a = corregir_abreviaturas( 'Q tal. okey xq.')
+#a = corregir_abreviaturas( 'Q tal. okey xq.')
 #print(a)
