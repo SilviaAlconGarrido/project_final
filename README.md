@@ -127,13 +127,18 @@ Proyect_final/
 │       ├── conversacion_M_sentimiento.csv
 │       └── data_capi_chat_clear.csv
 ├── modules
-│   ├── m_bic_ava.py
-│   ├── m_biciMad.py
-│   ├── m_biciPark.py
-│   ├── m_func_ava.py
-│   ├── m_funciones_bicimad.py
-│   ├── m_funciones_bicipark.py
-│   └── m_json.py
+│   ├── abreviaturas.py
+│   ├── acentos.py
+│   ├── carasteres_especiales.py
+│   ├── conversaciones.py
+│   ├── general.py
+│   ├── lemmatizacion.py
+│   ├── ngrams.py
+│   ├── normalize.py
+│   ├── Remove_stopwords.py
+│   ├── Text_stemming.py
+│   ├── textBlod.py
+│   └── vader.py
 ├── notebooks
 │   ├── Capi_chat_limpieza.ipynb
 │   ├── chat_sentimientos.ipynb
